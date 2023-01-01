@@ -1,0 +1,9 @@
+- name: reusing playbooks
+  hosts: all
+  tasks:
+    - name: reboot all servers
+      reboot:
+        msg: server is rebooting...
+
+- name: run first playbook
+  import_playbook: first-playbook.yml
