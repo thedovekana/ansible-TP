@@ -8,3 +8,6 @@
         mode: 0664
         owner: akoni
         state: touch
+
+    - name: create groups #by importing group-tasks.yml file
+      import_tasks: group-tasks.yml
