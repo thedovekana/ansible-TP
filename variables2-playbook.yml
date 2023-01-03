@@ -1,0 +1,15 @@
+- name: Working with variables
+  hosts: node1
+  vars_files: myvars.yml
+  tasks:
+    - name: Show me fav_color value
+      debug:
+        msg: My favorite color is {{ fav_color }}.
+
+    - name: Show 2nd item in port_nums
+      debug:
+        msg: SSH port is {{ port_nums[1] }}
+
+    - name: Show the uid of bob & shell of lisa
+      debug:
+        msg: Bob's uid is {{ users.bob.uid }}
